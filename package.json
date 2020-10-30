@@ -1,0 +1,51 @@
+{
+  "name": "countdown-indicator",
+  "version": "0.1.0",
+  "description": "Countdown Indicator: A customizable React component",
+  "main": "./dist/index.js",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "yarn build:clean && yarn rollup --config",
+    "build:clean": "rm -rf ./dist && yarn test:e2e:clean && mkdir dist",
+    "test": "jest --coverage",
+    "test:e2e": "yarn start-server-and-test test:e2e:server http://localhost:1234 \"cypress run\"",
+    "test:e2e:clean": "rm -rf ./e2e/dist",
+    "test:e2e:server": "yarn build && parcel ./e2e/index.html --out-dir ./e2e/dist"
+  },
+  "keywords": [
+    "react",
+    "typescript"
+  ],
+  "author": "Thomas Castle",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/enzyme": "^3.9.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/enzyme-to-json": "^1.5.3",
+    "@types/jest": "^24.0.13",
+    "@types/react": "^16.8.19",
+    "cypress": "^5.3.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "^24.8.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "rollup": "^1.14.6",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-typescript2": "^0.21.1",
+    "start-server-and-test": "^1.11.5",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.1"
+  },
+  "peerDependencies": {
+    "react": ">= 15",
+    "react-dom": ">= 15"
+  }
+}

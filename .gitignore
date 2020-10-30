@@ -1,0 +1,10 @@
+dist/
+node_modules/
+coverage/
+.cache/
+.yarn/
+*.DS_Store
+*.log
+*.idea
+*.vscode
+jsconfig.json
