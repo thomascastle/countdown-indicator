@@ -236,7 +236,8 @@ export default class Countdown extends React.Component<
   setTimeDeltaState(
     timeDelta: CountdownTimeDelta,
     status?: CountdownStatus,
-    callback?: (timeDelta: CountdownTimeDelta) => void
+    // callback?: (timeDelta: CountdownTimeDelta) => void
+    callback?
   ): void {
     if (!this.mounted) return;
 
